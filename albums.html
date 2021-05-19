@@ -26,6 +26,7 @@
                 <th>ID</th>
                 <th>title</th>
                 <th>User Id</th>
+                <th>Action</th>
             </tr>
         </thead>
                <tbody id="tbody" class="tbody">
@@ -38,14 +39,14 @@
     </div>
     <div class="inner-div" >
         <form id="form"  onsubmit="event.preventDefault(); formClear();">
-            <div class="form-field">
+            <div class="form-field form">
                 <label>title:</label>
                 <input type="text" id="name"  required class="input-field name" name="Name" placeholder="Name"/>
             </div>
            
           
            
-            <div class="form-field">
+            <div class="form-field d-flex" >
                 <button type="reset" name="reset" id="reset"  class="reset buttons">reset</button>
                
                 <button  name="update" type="submit"  id="update"  disabled class="update buttons">update</button>
@@ -56,7 +57,7 @@
 </div>
 </div>
     </body>
-    
+
     <script>
         var n = 1
         function myFunction() {
