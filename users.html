@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>
+            web task
+        </title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+        <script src="./jquery.min.js"></script>
+        <script src="./index.js"></script>
+    </head>
+
+    <body>
+        <div class="Container">
+            <div class="main-div">
+                <div class="inner-div">
+                    <table id="table" class="table">
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody" class="tbody">
+
+
+
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="inner-div">
+                    <form id="form" class="form" onsubmit="event.preventDefault(); formClear();">
+                        <div class="form-field form-group">
+                            <label>Name:</label>
+                            <input type="text" id="name" required class="input-field name form-control" name="Name"
+                                placeholder="Name" />
+                        </div>
+
+                        <div class="form-field form-group">
+                            <label>email:</label>
+                            <input type="email" required class="input-field age form-control" id="email" name="email"
+                                placeholder="example@example.com" />
+                        </div>
+
+                        <div class="form-field d-flex m-2">
+                            <button type="reset" name="reset" id="reset" class="btn btn-secondary reset buttons">reset</button>
+                            <button name="add" type="submit" id="add" class="btn btn-success add buttons">add</button>
+                            <button name="update" type="submit" id="update" disabled
+                                class="update buttons">update</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var n = 1
+        function myFunction() {
+            document.getElementById("myform").reset();
+        }
+        function formClear() {
+            $("#name").val("");
+            $("#form")[0].email.value = null
+
+        }
+    </script>
+
+</html>
